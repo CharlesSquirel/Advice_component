@@ -1,8 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
 import cube from "../../assets/icon-dice.svg";
 import { CardWrapper, HeadTitle, AdviceText, StyledButton } from "./StyledCard";
-import axios from "axios";
-import { useState } from "react";
 
 const Card: React.FC = () => {
   interface adviceProps {
@@ -17,7 +16,6 @@ const Card: React.FC = () => {
     const response = await axios.get("https://api.adviceslip.com/advice");
     const data = response.data.slip;
     setAdvice({...advice, text: data.advice, id: data.id})
-    console.log(advice);
   };
 
   return (
