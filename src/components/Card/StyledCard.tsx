@@ -51,9 +51,9 @@ export const AdviceText = styled.h2`
     left: 0;
     right: 0;
     @media (max-width: ${maxMobile}) {
-    content: url(${patternMobile});
-    bottom: 55px;
-  }
+      content: url(${patternMobile});
+      bottom: 55px;
+    }
   }
   @media (max-width: ${maxMobile}) {
     font-size: 24px;
@@ -76,5 +76,8 @@ export const StyledButton = styled.button`
   }
   :hover {
     box-shadow: 0px 0px 40px #53ffaa;
+    @media (max-width: ${maxMobile}) {
+      pointer-events: none;
+    }
   }
 `;
